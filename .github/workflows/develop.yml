@@ -1,0 +1,18 @@
+name: 'Deploy - Develop'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+
+jobs:
+  develop:
+    uses: mvasquez13/shared-devsecops-actions/.github/workflows/aks_tpl.yml
+    with:
+      java-version: '17'
+      app-name: 'mibanco-demo'
+      k8s-namespace: 'mibanco-dev'
+    secrets:
+      registry-username: ${{ secrets.ACR_DEV_USERNAME }}
+      registry-password: ${{ secrets.ACR_DEV_PASSWORD }}

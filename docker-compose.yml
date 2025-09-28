@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  mibanco-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - JAVA_OPTS=-Xmx512m -Xms256m
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/mibanco/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - mibanco-network
+
+networks:
+  mibanco-network:
+    driver: bridge
