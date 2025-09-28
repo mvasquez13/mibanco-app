@@ -1,14 +1,6 @@
 # MiBanco Demo Application
 
-Este repositorio contiene una aplicación demo que consume las acciones compartidas de DevSecOps de MiBanco.
-
-## 🎯 Propósito
-
-Esta aplicación demuestra:
-- Uso de actions reutilizables para CI/CD
-- Integración de análisis de seguridad (SAST/SCA/DAST)
-- Best practices de desarrollo seguro
-- Deployment automatizado a Kubernetes
+Este repositorio contiene una aplicación demo.
 
 ## 🏗️ Arquitectura
 
@@ -16,8 +8,6 @@ La aplicación utiliza:
 - **Spring Boot 3.1.5** con Java 17
 - **Maven 3.9** como build tool
 - **Docker** para containerización
-- **Kubernetes** para deployment
-- **Actions compartidas** para DevSecOps pipeline
 
 ## 🛠️ Desarrollo Local
 
