@@ -1,4 +1,4 @@
-name: 'Deploy - Develop'
+name: Deploy - Develop
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   develop:
-    uses: mvasquez13/shared-devsecops-actions/.github/workflows/aks_tpl.yml
+    uses: mvasquez13/shared-devsecops-actions/.github/workflows/aks_tpl.yml@main
     with:
       java-version: '17'
       app-name: 'mibanco-demo'
