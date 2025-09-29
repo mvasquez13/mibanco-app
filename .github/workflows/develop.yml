@@ -16,3 +16,4 @@ jobs:
     secrets:
       registry-username: ${{ secrets.ACR_DEV_USERNAME }}
       registry-password: ${{ secrets.ACR_DEV_PASSWORD }}
+      grafana-api-key: ${{ secrets.GRAFANA_API_KEY }}
